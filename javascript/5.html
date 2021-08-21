@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+
+
+<input type="number" id="first" placeholder="First">
+<input type="number" id="second" placeholder="Second">
+
+<br>
+
+<button onclick="total('add')">+</button>
+<button onclick="total('sub')">-</button>
+<button onclick="total('mul')">x</button>
+<button onclick="total('div')">/</button>
+
+<br>
+
+<input type="button" value="add" onclick="total(this.value)">
+<input type="button" value="sub" onclick="total(this.value)">
+<input type="button" value="mul" onclick="total(this.value)">
+<input type="button" value="div" onclick="total(this.value)">
+
+<button onclick="fc();">Click me</button>
+
+<p id="print"></p>
+
+<script type="text/javascript">
+
+function fc(){
+	document.getElementById('first').focus();
+}
+
+	
+	function total(x){
+		// alert(x);
+	 	var a = parseFloat(document.getElementById('first').value);
+		var b = parseFloat(document.getElementById('second').value);
+		var c = 0;
+		if (x == 'add') {
+			c = a+b;
+		}else if(x == 'sub'){
+			c = a-b;			
+		}else if(x == 'mul'){
+			c = a*b;			
+		}else if(x == 'div'){
+			c = a/b;			
+		}
+		document.getElementById('print').innerHTML = c;
+	 	document.getElementById('first').value = '';
+		document.getElementById('second').value = '';
+		document.getElementById('first').focus();
+	}
+</script>
+
+
+
+
+
+</body>
+</html>

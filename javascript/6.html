@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+
+<input type="text" class="input" id="first" placeholder="Color 1"><br>
+<input type="text" class="input" id="second" placeholder="Color 2"><br>
+<input type="text" class="input" id="third" placeholder="Color 3"><br>
+
+<button onclick="cll()">Click Me</button>
+
+<p id="print"></p>
+
+<script type="text/javascript">
+	
+function cll(){
+	var a = document.getElementsByClassName('input');
+	// console.log(a.length);
+	var total = '';
+	for (var i = 0; i < a.length; i++) {
+		// console.log(a[i].value);
+		var c = a[i].value+"-";
+		total += c;
+	}
+	document.getElementById('print').innerHTML = total;
+}
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

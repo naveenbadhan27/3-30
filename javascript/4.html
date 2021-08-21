@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+
+<input type="number" id="first" placeholder="First">
+<input type="number" id="second" placeholder="Second">
+
+<input type="button" onclick="addinp()" id="one" value="1">
+
+<button onclick="add()">+</button>
+<button onclick="sub()">-</button>
+<button onclick="mul()">x</button>
+<button onclick="div()">/</button>
+
+<p id="print"></p>
+
+<script type="text/javascript">
+
+function addinp(){
+	var c = document.getElementById('one').value;
+	document.getElementById('first').value = c;
+}
+
+
+function add(){
+ 	var a = document.getElementById('first').value;
+	var b = document.getElementById('second').value;
+	// console.log(parseInt(a)+parseInt(b));
+	document.getElementById('print').innerHTML = parseInt(a)+parseInt(b);
+}
+function sub(){
+	var a = document.getElementById('first').value;
+	var b = document.getElementById('second').value;
+	// console.log(parseInt(a)+parseInt(b));
+	document.getElementById('print').innerHTML = parseInt(a)-parseInt(b);
+}
+function mul(){
+	var a = document.getElementById('first').value;
+	var b = document.getElementById('second').value;
+	// console.log(parseInt(a)+parseInt(b));
+	document.getElementById('print').innerHTML = parseInt(a)*parseInt(b);
+}
+function div(){
+	var a = document.getElementById('first').value;
+	var b = document.getElementById('second').value;
+	// console.log(parseInt(a)+parseInt(b));
+	document.getElementById('print').innerHTML = parseInt(a)/parseInt(b);
+}
+
+
+</script>
+
+
+
+
+</body>
+</html>
