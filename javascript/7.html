@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.game{
+			width: 60%;
+			margin: auto;
+			background: indianred;
+			height: 400px;
+		}
+		.obj{
+			height: 30px;
+			width: 30px;
+			background: darkred;
+			border-radius: 50%;
+		}
+		.scoreboard{
+			width: 58%;
+			margin: auto;
+			height: 50px;
+			margin-top: 100px;
+			font-size: 20px;
+		}
+		.score{
+			float: right;
+		}
+	</style>
+</head>
+<body>
+
+
+
+<div class="scoreboard">
+	<div class="score">
+		Score - <span id="score"></span>
+	</div>
+	<div class="bullet">
+		Total Bullets - <span id="bullet"></span>
+		<button onclick="reload()">Reload</button>
+	</div>
+</div>
+<div class="game" onclick="fire()">
+	<div class="obj" onclick="shoot()"></div>
+
+</div>
+
+
+<script type="text/javascript">
+	
+	var bullet_num = 5;
+	var score_num = 0;
+
+	function bullet(){
+		document.getElementById('bullet').innerHTML = bullet_num;
+	}
+	bullet();
+
+	function score(){
+		document.getElementById('score').innerHTML = score_num;
+	}
+	score();
+
+	function fire(){
+		if (bullet_num == 0) {
+			alert('Game Over');
+			bullet_num = 5;
+			score_num = 0;
+			bullet();
+			score();
+
+		}else{
+			bullet_num = bullet_num - 1;
+			bullet();
+		}
+	}
+
+	function shoot(){
+		score_num = score_num + 1;
+		score();
+	}
+
+	function reload(){
+		bullet_num = 5;
+		bullet();
+	}
+</script>
+
+
+
+
+</body>
+</html>
